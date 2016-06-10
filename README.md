@@ -127,3 +127,5 @@
             + elementy oznaczają kolejne figury w macierzy
                 @ None (w tym miejscu nie bedzie żadnej figury)
                 @ inne (figura, która powinna byc wyświetlona na danej pozycji)
+                
+http://image.online-convert.com/convert-to-svg
