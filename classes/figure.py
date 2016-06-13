@@ -14,6 +14,8 @@ class Figure:
         elif not color:
             elem_to_change.remove(1)
 
+        elem_to_change = random.choice(elem_to_change)
+
         if all:
             if elem_to_change == 0:
                 new_parameters = random.choice(
@@ -36,7 +38,7 @@ class Figure:
                 self.parameters = new_parameters
 
     def info(self):
-        return list(self.parameters)
+        return str(self.parameters[0]) + '_' + str(self.parameters[1]) + '.png'
 
     def __str__(self):
         return str(self.parameters)
