@@ -30,5 +30,5 @@ for filename in filenames:
                 element.set("stroke-width", stroke_width)
 
         res_file_name = filename.split('.')[0] + "_" + str(color_idx+1) + ".svg"
-        with open(join('all', res_file_name), 'w') as res_file:
+        with open(join('all_svg', res_file_name), 'w') as res_file:
             res_file.write(etree.tostring(tree, pretty_print=True))
