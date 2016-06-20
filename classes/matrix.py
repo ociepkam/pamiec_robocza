@@ -39,9 +39,12 @@ class Matrix:
         for _ in range(self.size):
             self.matrix.append(None)
         for _ in range(elements):
-            self.add_figure()
+            if elements <= 9:
+                self.add_figure("small")
+            else:
+                self.add_figure("big")
 
-    def add_figure(self):
+    def add_figure(self, size):
         if self.unique:
             if not self.possible_figures:
                 self.possible_figures = self.all_possible_figures
@@ -53,7 +56,10 @@ class Matrix:
         free = []
         for i in range(self.size):
             if self.matrix[i] is None:
-                free.append(i)
+                if size == 'big':
+                    free.append(i)
+                elif i in [6, 7, 8, 11, 12, 13, 16, 17, 18]:
+                    free.append(i)
 
         self.matrix[random.choice(free)] = Figure(fig)
 

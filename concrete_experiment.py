@@ -31,19 +31,6 @@ def load_info(filename):
     number_of_blocks = max([int(x.value) for x in sheet.columns[0][1:]])
     return number_of_blocks, experiment
 
-"""
-ws.append(
-        ['block_number', 'trial_type', 'elements', 'feedb', 'figure', 'colors', 'change', 'unique', 'all', 'var',
-         'wait', 'ftime', 'mtime', 'stime', 'maxtime', 'shint', 'ehint', 'tip', 'tip_time'])
-
-
-trial_info['SAMPLE_TYPE'], trial_info['N'], trial_info['NR'], trial_info['MEMORY'],
-                          trial_info['INTEGR'], trial_info['SHOW_TIME'], trial_info['REST_TIME'], trial_info['MAX_TIME'],
-                          trial_info['FEEDB'], trial_info['FEEDB_TIME'], trial_info['WAIT'], trial_info['EXP'],
-                          trial_info['FIX_TIME'], trial_info['LIST_VIEW'], trial_info['LAST_REST_TIME']
-
-"""
-
 
 def concrete_experiment(participant_id, participant_sex, participant_age, file_name, random=1, eeg=0, fnirs=0):
     experiment_file_name = file_name + ".xlsx"
